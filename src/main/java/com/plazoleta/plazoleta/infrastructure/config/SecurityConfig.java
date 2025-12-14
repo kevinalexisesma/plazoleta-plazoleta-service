@@ -20,6 +20,7 @@ public class SecurityConfig {
                         .permitAll()
                         // Endpoints de restaurantes abiertos por ahora
                         .requestMatchers("/restaurants/**").permitAll()
+                        .requestMatchers("/dishes/**").permitAll()
                         // Todo lo demás también abierto
                         .anyRequest().permitAll());
         return http.build();
